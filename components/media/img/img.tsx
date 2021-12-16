@@ -5,6 +5,7 @@ import { ASSET_PATH } from '../../../config/cloudinary';
 // TODO:
 //  1. Make static types for transform options for safety
 //  2. Add objectFit and objectPosition https://nextjs.org/docs/api-reference/next/image#objectfit
+//  3. Perhaps just pass all args spread out and keep imageSrcPath functionality
 
 type ImgPropsType = {
   imgSrc?: string;
@@ -22,8 +23,8 @@ const Img: FunctionComponent<ImgPropsType> = (props) => {
     alt = '',
     ext = 'webp',
     transform,
-    width,
-    height,
+    width = 500,
+    height = 600,
     layout = undefined,
   } = props;
 
@@ -37,20 +38,16 @@ const Img: FunctionComponent<ImgPropsType> = (props) => {
   }
   // https://cloudinary.com/blog/painless_image_and_video_manipulation_with_javascript
   const imgSrcPath = `${ASSET_PATH}${transformClasses}${imgSrc}.${ext}`;
-  console.log(imgSrcPath);
+  console.log(height && width);
   return (
     <>
-      {width && height ? (
-        <Image
-          src={imgSrcPath}
-          alt={alt}
-          layout={layout}
-          width={width}
-          height={height}
-        />
-      ) : (
-        <Image src={imgSrcPath} alt={alt} layout={layout} />
-      )}
+      <Image
+        src={imgSrcPath}
+        alt={alt}
+        layout={layout}
+        width={width}
+        height={height}
+      />
     </>
   );
 };

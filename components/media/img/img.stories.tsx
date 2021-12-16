@@ -8,4 +8,4 @@ export default {
   argTypes: {},
 } as Meta;
 
-export const ImagePreview: Story<ImgPropsType> = () => <Img />;
+export const ImagePreview: Story<ImgPropsType> = (args) => <Img {...args} />;
