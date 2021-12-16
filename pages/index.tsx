@@ -1,5 +1,19 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
+
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const { name, shared } = context.query;
+
+//   const isShared = shared !== undefined;
+
+//   // return the properties so they are available in the `Index` component
+//   return {
+//     props: {
+//       name: decodeURI(name as string),
+//       isShared,
+//     },
+//   };
+// };
 
 const Home: NextPage = () => {
   return (
