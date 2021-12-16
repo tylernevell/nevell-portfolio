@@ -7,7 +7,6 @@ module.exports = withPWA({
   reactStrictMode: true,
   images: {
     domains: ['res.cloudinary.com'],
-    loader: 'cloudinary',
   },
   pwa: {
     dest: 'public',
