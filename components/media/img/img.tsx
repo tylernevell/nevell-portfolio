@@ -6,6 +6,7 @@ import { ASSET_PATH } from '../../../config/cloudinary';
 //  1. Make static types for transform options for safety
 //  2. Add objectFit and objectPosition https://nextjs.org/docs/api-reference/next/image#objectfit
 //  3. Perhaps just pass all args spread out and keep imageSrcPath functionality
+//  4. for layout-fill https://github.com/vercel/next.js/blob/canary/examples/image-component/pages/layout-fill.js
 
 type ImgPropsType = {
   imgSrc?: string;
