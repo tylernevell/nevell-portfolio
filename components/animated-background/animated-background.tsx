@@ -1,6 +1,9 @@
 import { useEffect, useState, VoidFunctionComponent } from 'react';
 import anime from 'animejs';
 
+// TODO:
+//    1. Make responsive. Stars don't show when screen size increases. z index?
+
 const AnimatedBackground: VoidFunctionComponent = (props) => {
   const {} = props;
 
@@ -69,7 +72,7 @@ const AnimatedBackground: VoidFunctionComponent = (props) => {
   });
 
   return (
-    <div className="w-screen h-screen bg-primary-default">
+    <div className="w-screen h-screen bg-primary-default -z-10">
       <svg id="sky">
         {[...Array(num)].map((x, y) => (
           <circle
