@@ -72,7 +72,7 @@ const AnimatedBackground: VoidFunctionComponent = (props) => {
   });
 
   return (
-    <div className="w-screen h-screen bg-primary-default -z-10">
+    <section className="w-screen h-screen bg-primary-default -z-10">
       <svg id="sky">
         {[...Array(num)].map((x, y) => (
           <circle
@@ -99,7 +99,7 @@ const AnimatedBackground: VoidFunctionComponent = (props) => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
