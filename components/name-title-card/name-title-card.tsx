@@ -1,6 +1,6 @@
-import { FunctionComponent } from 'react';
-import { NameSVG } from '../name-svg.tsx/name-svg';
-import { Typography } from '../typography/typography';
+import { FunctionComponent } from "react";
+import { NameSVG } from "../svgs/name-svg.tsx/name-svg";
+import { Typography } from "../typography/typography";
 
 const NameTitleCard: FunctionComponent = () => {
   return (
@@ -8,7 +8,7 @@ const NameTitleCard: FunctionComponent = () => {
       <h1 className="relative row-span-1 h-full col-span-6 sm:col-span-4 sm:col-start-2 lg:col-span-6 lg:col-start-4">
         <NameSVG />
       </h1>
-      <div className="relative row-start-2 col-span-6 lg:col-span-3 lg:col-start-7">
+      <div className="relative mt-2 row-start-2 col-span-6 lg:col-span-3 lg:col-start-7">
         <Typography
           variant="h2"
           size="text-lg"

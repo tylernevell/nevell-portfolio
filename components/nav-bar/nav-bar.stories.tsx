@@ -1,14 +1,12 @@
-import React from 'react';
-import { ComponentMeta } from '@storybook/react';
-import { NavBar } from './nav-bar';
+import React from "react";
+import { Meta, Story } from "@storybook/react";
+import { NavBar } from "./nav-bar";
+import { linkItems } from "./link-items";
 
-const Block: React.VoidFunctionComponent = () => <h1>WIP</h1>;
 export default {
-  title: 'Components/NavBar',
+  title: "Components/NavBar",
   component: NavBar,
-} as ComponentMeta<typeof Block>;
+  argTypes: {},
+} as Meta;
 
-export const Basic = {
-  args: {},
-  parameters: {},
-};
+export const Menu: Story = () => <NavBar links={linkItems} />;

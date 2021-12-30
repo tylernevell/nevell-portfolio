@@ -10,5 +10,6 @@ TODO:
 
    - https://stackoverflow.blog/2021/12/21/creating-a-good-feedback-loop-between-ops-and-devs-using-documentation/?cb=1
 
-3. PRIORITY: Build the main menu
-   - Pass classes down to children from intro to make fade in and fade out. additionally, change z index
+3. PRIORITY: Page Transitions https://dev.to/anxinyang/page-transition-effect-in-nextjs-9ch
+
+Add NextSeo https://github.com/garmeeh/next-seo
