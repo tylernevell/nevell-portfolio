@@ -2,6 +2,7 @@ import { FunctionComponent, useState, useEffect } from "react";
 import { useInterval } from "../../hooks/use-interval/use-interval";
 import { IntroCommand } from "../intro-command/intro-command";
 import { MainMenu } from "../main-menu/main-menu";
+import { linkItems } from "../nav-bar/link-items";
 
 const Intro: FunctionComponent = () => {
   const [isPlaying, setPlaying] = useState(true);
@@ -48,6 +49,7 @@ const Intro: FunctionComponent = () => {
         }
       />
       <MainMenu
+        links={linkItems}
         className={
           enterIsPressed
             ? "transition duration-1000 ease-in-out opacity-100 z-10"

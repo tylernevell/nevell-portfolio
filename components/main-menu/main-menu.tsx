@@ -8,7 +8,7 @@ import { linkItems } from "../nav-bar/link-items";
 
 type PropsType = {
   className: string;
-  links: LinkItem[];
+  links?: LinkItem[];
 };
 
 const MainMenu: FunctionComponent<PropsType> = (props) => {
