@@ -1,0 +1,17 @@
+{
+  "short_name": "Tyler Nevell",
+  "name": "Tyler Nevell: Portolio of a Frontend Engineer",
+  "description": "The Portfolio of Tyler Nevell and his work as a Frontend Engineer.",
+  "icons": [
+    {
+      "src": "",
+      "type": "",
+      "sizes": ""
+    }
+  ],
+  "start_url": "https://nevell-portfolio.vercel.app/",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}

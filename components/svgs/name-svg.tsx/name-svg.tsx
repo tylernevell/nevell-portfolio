@@ -1,10 +1,8 @@
 import { VoidFunctionComponent } from 'react';
 
-const Name: VoidFunctionComponent = () => {
+const NameSVG: VoidFunctionComponent = () => {
   return (
     <svg
-      width="w-full"
-      height="h-full"
       fill="url(#grad1)"
       viewBox="0 0 866 108"
       xmlns="http://www.w3.org/2000/svg"
@@ -26,4 +24,4 @@ const Name: VoidFunctionComponent = () => {
   );
 };
 
-export { Name };
+export { NameSVG };

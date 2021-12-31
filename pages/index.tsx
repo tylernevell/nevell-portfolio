@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { Intro } from '../components/intro/intro';
+import { MainMenu } from '../components/main-menu/main-menu';
 
 // export const getStaticProps: GetStaticProps = async () => {
 //   const menuItems = await fetch(ROUTE.PAGE).then((r) => r.json());
@@ -27,13 +29,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>hello world</h1>
+      <main className="flex flex-1 h-screen bg-primary-default">
+        <Intro />
       </main>
-
-      <footer>
-        <span>copyright Tyler Nevell 2021</span>
-      </footer>
     </div>
   );
 };
