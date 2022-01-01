@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { FunctionComponent } from 'react';
-import { ASSET_PATH } from '../../../config/cloudinary';
+import Image from "next/image";
+import { FunctionComponent } from "react";
+import { ASSET_PATH } from "../../../config/cloudinary";
 
 // TODO:
 //  1. Make static types for transform options for safety
@@ -11,45 +11,45 @@ import { ASSET_PATH } from '../../../config/cloudinary';
 type ImgPropsType = {
   imgSrc?: string;
   alt?: string;
-  ext?: 'jpg' | 'png' | 'webp';
+  ext?: "jpg" | "png" | "webp";
   transform?: string[] | undefined;
   width?: number;
   height?: number;
-  layout?: 'fixed' | 'responsive' | 'fill' | 'intrinsic';
+  layout?: "fixed" | "responsive" | "fill" | "intrinsic";
 };
 
 const Img: FunctionComponent<ImgPropsType> = (props) => {
   const {
-    imgSrc = 'Photo_Aug_27_5_25_05_PM_ree8ne',
-    alt = '',
-    ext = 'webp',
+    imgSrc = "Photo_Aug_27_5_25_05_PM_ree8ne",
+    alt = "",
+    ext = "webp",
     transform,
-    width = 500,
-    height = 600,
+    width = 480,
+    height = 640,
     layout = undefined,
   } = props;
 
-  let transformClasses = '';
+  let transformClasses = "";
 
   if (transform) {
     // join
     let transformClasses = transform.join();
     // concatenate together and concat '/' to end
-    transformClasses = transformClasses + '/';
+    transformClasses = transformClasses + "/";
   }
+
   // https://cloudinary.com/blog/painless_image_and_video_manipulation_with_javascript
   const imgSrcPath = `${ASSET_PATH}${transformClasses}${imgSrc}.${ext}`;
   console.log(height && width);
+
   return (
-    <>
-      <Image
-        src={imgSrcPath}
-        alt={alt}
-        layout={layout}
-        width={width}
-        height={height}
-      />
-    </>
+    <Image
+      src={imgSrcPath}
+      alt={alt}
+      layout={layout}
+      width={width}
+      height={height}
+    />
   );
 };
 

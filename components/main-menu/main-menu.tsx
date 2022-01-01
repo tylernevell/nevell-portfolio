@@ -40,7 +40,7 @@ const MainMenu: FunctionComponent<PropsType> = (props) => {
                 color="text-on-primary-hover"
                 fontFamily="font-mono"
                 size="text-xl"
-                className="underline px-3 py-2 bg-transparent tracking-wide hover:bg-primary-hover hover:text-on-primary-hover"
+                className="underline rounded px-3 py-2 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover hover:text-on-primary-hover"
               >
                 {link.menuTitle}
               </Typography>

@@ -1,7 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { Intro } from '../components/intro/intro';
-import { MainMenu } from '../components/main-menu/main-menu';
+import type { NextPage } from "next";
+import Head from "next/head";
+import { Intro } from "../components/intro/intro";
 
 // export const getStaticProps: GetStaticProps = async () => {
 //   const menuItems = await fetch(ROUTE.PAGE).then((r) => r.json());

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useInterval } from "../../hooks/use-interval/use-interval";
 
 const SpinDecor = () => {
-  const spinningFrames = ["[\\]", "[\u2014]", "[/]", "[|]", ""];
+  const spinningFrames = ["[/]", "[\u2014]", "[\\]", "[|]", ""];
   const [count, setCount] = useState(0);
   const maxIndexOfSpinningFrames = spinningFrames.length - 1;
 
