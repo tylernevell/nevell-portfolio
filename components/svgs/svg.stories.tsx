@@ -5,6 +5,7 @@ import { LinkedInSVG } from "./linkedin-svg";
 import { ResumeSVG } from "./resume-svg";
 import { EmailSVG } from "./email-svg";
 import { InstagramSVG } from "./instagram-svg";
+import { Initial } from "./initial";
 
 const Block: React.VoidFunctionComponent = () => (
   <>
@@ -13,6 +14,7 @@ const Block: React.VoidFunctionComponent = () => (
     <ResumeSVG />
     <EmailSVG />
     <InstagramSVG />
+    <Initial />
   </>
 );
 export default {

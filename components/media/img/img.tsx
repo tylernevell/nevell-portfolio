@@ -24,8 +24,8 @@ const Img: FunctionComponent<ImgPropsType> = (props) => {
     alt = "",
     ext = "webp",
     transform,
-    width = 480,
-    height = 640,
+    width = 435,
+    height = 580,
     layout = undefined,
   } = props;
 

@@ -9,7 +9,6 @@ import { linkItems } from "./link-items";
     TODO: 
     1. Hide and show on scroll 
       https://dev.to/pratiksharm/navbar-hide-and-show-on-scroll-using-custom-react-hooks-1k98
-    2. Add active and focus color classes to links
 */
 
 type LinkItem = {
@@ -33,9 +32,12 @@ const NavBar: FunctionComponent<PropsType> = (props) => {
       <div className="px-4 lg:px-12 flex">
         <div className="flex flex-1">
           <Link href="/" passHref>
-            <a className="rounded pl-2 py-2 pr-5 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover hover:text-on-primary-hover">
+            <a
+              aria-label="home"
+              className="rounded pl-2 py-2 pr-5 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover hover:text-on-primary-hover"
+            >
               <Typography
-                className="pl-4 hidden sm:flex font-bold tracking-widest uppercase"
+                className="pl-4 hidden sm:flex font-bold tracking-wide uppercase"
                 variant="span"
                 fontFamily="font-mono"
               >
@@ -49,7 +51,7 @@ const NavBar: FunctionComponent<PropsType> = (props) => {
             <NavLink
               key={link?.slug?.current}
               href={link?.slug?.current}
-              ariaLabel={link?.title}
+              ariaLabel={link?.ariaLabel}
             >
               {link.title}
             </NavLink>

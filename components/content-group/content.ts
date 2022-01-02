@@ -2,21 +2,21 @@ import type { PropsType as ContentPropsType } from "./content-group";
 
 const content: ContentPropsType = {
   heading: {
-    children: "Frontend Engineer",
-    color: "text-on-primary-hover",
+    children: "A Frontend Engineer",
+    color: "text-secondary-active",
   },
   subHeading: {
     children:
       "Welcome! My name is Tyler Nevell " +
       "and I'm a Frontend Engineer. I apply my passion for web development towards creating " +
       "innovative experiences without relying on bulky libraries. " +
-      "I specialize in building efficient and fast applications with React.JS and Next.JS " +
+      "I specialize in building efficient and fast web applications " +
       "that look gorgeous and go above and beyond expectations. " +
-      "With every professional opportunity, I seek " +
+      "With every professional outlet, I seek " +
       "the opportunity to surround myself with motivated, smart, creative people " +
       "I can endlessly learn from while working on interesting and challenging engineering problems. " +
       "To be an engineer is to be a lifelong student.",
-    color: "text-on-primary-hover",
+    color: "text-secondary-active",
   },
   buttons: [{ children: "Download Resume", type: "button" }],
 };

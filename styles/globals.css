@@ -9,6 +9,10 @@ body,
   color: var(--primary-500);
 }
 
+.linear-gradient {
+  background: linear-gradient(to right, #ff47a1, #ff9f4d);
+}
+
 :root {
   --primary-400: #2d3748;
   --primary-500: #1a202c;
@@ -40,14 +44,14 @@ body,
   --accentB-700: #bf4a35;
   --accentB-800: #993b2b;
 
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --font-display: 'Trispace', sans-serif;
-  --font-sans: 'Libre Franklin', ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
-  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-display: "Trispace", sans-serif;
+  --font-sans: "Libre Franklin", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --speed: 5;
 }
 
@@ -61,7 +65,7 @@ a {
 }
 
 .typing-text::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: -16px;

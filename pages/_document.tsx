@@ -1,7 +1,7 @@
 // TODO
 // https://nextjs.org/docs/advanced-features/custom-document
 
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
@@ -19,6 +19,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Libre+Franklin:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Trispace:wdth,wght@125,500&display=swap"
             rel="stylesheet"
           />
+          <link rel="icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
           <meta
             name="application-name"
@@ -36,7 +37,7 @@ class MyDocument extends Document {
             type="image/png"
             sizes="32x32"
           />
-          <link rel="apple-touch-icon" href="/apple-icon.png" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <meta name="theme-color" content="#317EFB" />
           <meta name="mobile-web-app-capable" content="yes" />
         </Head>

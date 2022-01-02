@@ -1,16 +1,16 @@
-import React from 'react';
-import type { PropsType } from './types';
+import React from "react";
+import type { PropsType } from "./types";
 
 // TODO:
 //    1. Don't like font-display. Change it
 
 export const Typography = ({
-  children = 'The quick brown fox jumps over the lazy dog.',
-  variant = 'p',
-  color = 'currentColor',
-  size = 'text-base',
-  textAlign = 'text-left',
-  fontFamily = 'font-sans',
+  children = "The quick brown fox jumps over the lazy dog.",
+  variant = "p",
+  color = "currentColor",
+  size = "text-base",
+  textAlign = "text-left",
+  fontFamily = "font-sans",
   className,
   ...props
 }: PropsType) => {

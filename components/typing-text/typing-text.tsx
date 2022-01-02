@@ -1,6 +1,6 @@
-import { FunctionComponent, useState } from 'react';
-import { useInterval } from '../../hooks/use-interval/use-interval';
-import { Typography } from '../typography/typography';
+import { FunctionComponent, useState } from "react";
+import { useInterval } from "../../hooks/use-interval/use-interval";
+import { Typography } from "../typography/typography";
 
 type PropsType = {
   children: string;
@@ -8,8 +8,8 @@ type PropsType = {
 };
 
 const TypingText: FunctionComponent<PropsType> = (props) => {
-  const { children = 'npm run dev', className = '' } = props;
-  const [text, updateText] = useState('n');
+  const { children = "npm run dev", className = "" } = props;
+  const [text, updateText] = useState("n");
   const [isPlaying, setPlaying] = useState(true);
   const [pointer, updatePointer] = useState(1);
 
@@ -28,7 +28,7 @@ const TypingText: FunctionComponent<PropsType> = (props) => {
 
   return (
     <Typography
-      variant="h1"
+      variant="span"
       size="text-3xl"
       color="text-on-primary-hover"
       fontFamily="font-mono"
