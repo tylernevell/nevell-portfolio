@@ -6,13 +6,16 @@ import { LinkedInSVG } from "../svgs/linkedin-svg";
 import { ResumeSVG } from "../svgs/resume-svg";
 
 const IconLinks: VoidFunctionComponent = () => {
+  const buttonClasses =
+    "rounded px-3 py-3 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover focus:bg-primary-focus active:bg-primary-active";
+
   return (
     <>
       <a
         href="https://github.com/tylernevell"
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded px-3 py-3 bg-transparent tracking-wide hover:bg-primary-hover focus:bg-primary-focus active:bg-primary-active"
+        className={buttonClasses}
       >
         <GithubSVG />
       </a>
@@ -20,7 +23,7 @@ const IconLinks: VoidFunctionComponent = () => {
         href="https://www.linkedin.com/in/tylernevell"
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded px-3 py-3 bg-transparent tracking-wide hover:bg-primary-hover"
+        className={buttonClasses}
       >
         <LinkedInSVG />
       </a>
@@ -28,7 +31,7 @@ const IconLinks: VoidFunctionComponent = () => {
         href=""
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded px-3 py-3 bg-transparent tracking-wide hover:bg-primary-hover"
+        className={buttonClasses}
       >
         <ResumeSVG />
       </a>
@@ -36,7 +39,7 @@ const IconLinks: VoidFunctionComponent = () => {
         href="https://www.instagram.com/tylernevell/?hl=en"
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded px-3 py-3 bg-transparent tracking-wide hover:bg-primary-hover"
+        className={buttonClasses}
       >
         <InstagramSVG />
       </a>
@@ -44,7 +47,7 @@ const IconLinks: VoidFunctionComponent = () => {
         href="mailto:tylernevelljobs@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded px-3 py-3 bg-transparent tracking-wide hover:bg-primary-hover"
+        className={buttonClasses}
       >
         <EmailSVG />
       </a>

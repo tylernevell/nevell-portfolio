@@ -1,7 +1,7 @@
-import { FunctionComponent, useState } from 'react';
-import { TypingText } from '../typing-text/typing-text';
-import { Typography } from '../typography/typography';
-import { useInterval } from '../../hooks/use-interval/use-interval';
+import { FunctionComponent, useState } from "react";
+import { TypingText } from "../typing-text/typing-text";
+import { Typography } from "../typography/typography";
+import { useInterval } from "../../hooks/use-interval/use-interval";
 
 type PropsType = {
   className: string;
@@ -28,15 +28,15 @@ const IntroCommand: FunctionComponent<PropsType> = (props) => {
       <header className="relative mx-auto place-self-center">
         <TypingText>npm run dev</TypingText>
         <Typography
-          variant="h2"
+          variant="p"
           fontFamily="font-sans"
           size="text-xs"
           textAlign="text-center"
           color="text-on-primary-hover"
           className={`mt-1 underline ${
             isPlaying
-              ? 'opacity-0'
-              : 'transition duration-1000 ease-in opacity-100'
+              ? "opacity-0"
+              : "transition duration-1000 ease-in opacity-100"
           }`}
         >
           press enter

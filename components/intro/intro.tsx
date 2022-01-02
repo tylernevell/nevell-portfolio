@@ -4,6 +4,8 @@ import { IntroCommand } from "../intro-command/intro-command";
 import { MainMenu } from "../main-menu/main-menu";
 import { linkItems } from "../nav-bar/link-items";
 
+// TODO: Add a11y functionality to links. Should be able to tab and enter to use links
+
 const Intro: FunctionComponent = () => {
   const [isPlaying, setPlaying] = useState(true);
   const [enterIsPressed, setEnterIsPressed] = useState(false);

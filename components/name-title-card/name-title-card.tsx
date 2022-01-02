@@ -4,7 +4,7 @@ import { Typography } from "../typography/typography";
 
 const NameTitleCard: FunctionComponent = () => {
   return (
-    <section className="container relative max-w-screen-xl relative flex grid mx-auto grid-cols-6 grid-rows-2 lg:grid-cols-12 place-center-self">
+    <section className="container relative max-w-screen-xl flex grid mx-auto grid-cols-6 grid-rows-2 lg:grid-cols-12 place-center-self">
       <h1 className="relative row-span-1 h-full col-span-6 sm:col-span-4 sm:col-start-2 lg:col-span-6 lg:col-start-4">
         <NameSVG />
       </h1>

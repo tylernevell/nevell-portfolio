@@ -6,7 +6,8 @@ import { SpinDecor } from "./spin-decor";
 import { linkItems } from "./link-items";
 
 /* 
-    TODO: Hide and show on scroll 
+    TODO: 
+    1. Hide and show on scroll 
       https://dev.to/pratiksharm/navbar-hide-and-show-on-scroll-using-custom-react-hooks-1k98
 */
 
@@ -27,13 +28,16 @@ const NavBar: FunctionComponent<PropsType> = (props) => {
   const { links = linkItems } = props;
 
   return (
-    <nav className="shadow-md text-on-primary-hover z-30 py-6 w-full fixed bg-tertiary-focus">
+    <nav className="shadow-xl text-on-primary-hover z-30 py-6 w-full fixed bg-tertiary-focus">
       <div className="px-4 lg:px-12 flex">
         <div className="flex flex-1">
           <Link href="/" passHref>
-            <a className="px-3 py-2 bg-transparent tracking-wide hover:bg-primary-hover hover:text-on-primary-hover">
+            <a
+              aria-label="home"
+              className="rounded pl-2 py-2 pr-5 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover hover:text-on-primary-hover"
+            >
               <Typography
-                className="pl-4 hidden sm:flex font-bold tracking-widest uppercase"
+                className="pl-4 hidden sm:flex font-bold tracking-wide uppercase"
                 variant="span"
                 fontFamily="font-mono"
               >
@@ -47,7 +51,7 @@ const NavBar: FunctionComponent<PropsType> = (props) => {
             <NavLink
               key={link?.slug?.current}
               href={link?.slug?.current}
-              ariaLabel={link?.title}
+              ariaLabel={link?.ariaLabel}
             >
               {link.title}
             </NavLink>
