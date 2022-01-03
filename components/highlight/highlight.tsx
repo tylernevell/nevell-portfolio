@@ -13,7 +13,7 @@ const Highlight: VoidFunctionComponent = () => {
             <ContentGroup {...content} />
           </div>
           <div className="col-span-6 lg:col-span-3 order-1 lg:order-none pb-8 lg:pb-0">
-            <Img layout="responsive" />
+            <Img layout="responsive" isPriority={true} />
           </div>
         </div>
       </div>

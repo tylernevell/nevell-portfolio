@@ -58,7 +58,7 @@ const Home: NextPage = () => {
           sizes="32x32"
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#317EFB" />
+        {/* <meta name="theme-color" content="#317EFB" /> */}
         <meta name="mobile-web-app-capable" content="yes" />
       </Head>
 

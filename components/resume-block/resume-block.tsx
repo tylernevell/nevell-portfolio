@@ -51,7 +51,7 @@ const ResumeBlock: FunctionComponent<ResumeBlockPropsType> = (props) => {
               <ResumeItem {...experience} />
             ))}
           </ul>
-          <Button type="button" onClick={toggleLimit}>
+          <Button id="resumebutton" type="button" onClick={toggleLimit}>
             {toggleText} humble beginnings
           </Button>
         </div>

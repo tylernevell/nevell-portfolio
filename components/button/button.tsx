@@ -94,6 +94,7 @@ const Button = forwardRef<RefType, ButtonPropsType>((props, ref) => {
       aria-expanded={ariaExpanded}
       aria-label={ariaLabel}
       id={id}
+      key={id}
       name={name}
       ref={ref}
       className={buttonTypeClasses}

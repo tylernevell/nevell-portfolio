@@ -7,7 +7,7 @@ import type { ButtonPropsType } from "../button/button";
 type PropsType = {
   heading: TypographyPropsType;
   subHeading: TypographyPropsType;
-  buttons: ButtonPropsType[];
+  buttons: ButtonPropsType;
 };
 
 const ContentGroup: FunctionComponent<PropsType> = (props) => {
@@ -30,9 +30,7 @@ const ContentGroup: FunctionComponent<PropsType> = (props) => {
           {...subHeading}
         />
         <div className="flex mt-10">
-          {buttons.map((items) => (
-            <Button {...items} />
-          ))}
+          <Button {...buttons} />
         </div>
       </div>
     </header>
