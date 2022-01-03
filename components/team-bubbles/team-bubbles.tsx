@@ -13,7 +13,7 @@ type TeammateCardPropsType = {
 };
 
 type PropsType = {
-  teammates: ImgPropsType[];
+  teammates: TeammateCardPropsType[];
 };
 
 const TeammateCard: FunctionComponent<TeammateCardPropsType> = ({
@@ -62,7 +62,7 @@ const TeamBubbles: FunctionComponent<PropsType> = (props) => {
       <div className="container flex overflow-x-auto scroll-snap-x lg:scroll-snap-none lg:grid lg:gap-4 lg:grid-cols-9 max-w-full md:container md:pl-0 pl-5 xl:grid-cols-12">
         {rows.map((row, rowIdx) =>
           row.map((teammate, colIdx) => (
-            <TeammateCard row={rowIdx} column={colIdx} card={teammate} />
+            <TeammateCard {...teammate} row={rowIdx} column={colIdx} />
           ))
         )}
       </div>
@@ -70,7 +70,7 @@ const TeamBubbles: FunctionComponent<PropsType> = (props) => {
   );
 };
 
-const arrangeTeamIntoRows = (teammates: PersonPropsType[]) => {
+const arrangeTeamIntoRows = (teammates: TeammateCardPropsType[]) => {
   const rows = [];
   for (let i = 1; teammates.length > 0; i += 1) {
     rows.push(teammates.splice(0, i));
