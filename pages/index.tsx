@@ -62,7 +62,7 @@ const Home: NextPage = () => {
         <meta name="mobile-web-app-capable" content="yes" />
       </Head>
 
-      <main className="flex flex-1 h-screen bg-primary-default">
+      <main className="bg-primary-default">
         <Intro />
       </main>
     </div>
