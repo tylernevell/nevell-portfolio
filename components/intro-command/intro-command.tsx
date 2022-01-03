@@ -3,6 +3,8 @@ import { TypingText } from "../typing-text/typing-text";
 import { Typography } from "../typography/typography";
 import { useInterval } from "../../hooks/use-interval/use-interval";
 
+// TODO: slightly off center on mobile. fix
+
 type PropsType = {
   className: string;
 };
