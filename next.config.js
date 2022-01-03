@@ -8,7 +8,6 @@ module.exports = withPWA({
   images: {
     loader: "cloudinary",
     path: "https://res.cloudinary.com/de3scdzao/image/upload/",
-    domains: ["res.cloudinary.com"],
   },
   pwa: {
     dest: "public",

@@ -21,7 +21,7 @@ type ImgPropsType = {
 
 const Img: FunctionComponent<ImgPropsType> = (props) => {
   const {
-    imgSrc = "Photo_Aug_07_8_24_23_AM_ucibq5",
+    imgSrc = "portfolio_photo_h5zkg1",
     alt = "",
     ext = "webp",
     transform,
@@ -39,7 +39,7 @@ const Img: FunctionComponent<ImgPropsType> = (props) => {
   }
 
   // https://cloudinary.com/blog/painless_image_and_video_manipulation_with_javascript
-  const imgSrcPath = `${transformClasses}/v1639606444/portfolio/${imgSrc}.${ext}`;
+  const imgSrcPath = `/v1639606444/portfolio/${imgSrc}.${ext}`;
 
   return (
     <>
