@@ -16,6 +16,7 @@ type ImgPropsType = {
   width?: number;
   height?: number;
   layout?: "fixed" | "responsive" | "fill" | "intrinsic";
+  isPriority?: boolean;
 };
 
 const Img: FunctionComponent<ImgPropsType> = (props) => {
@@ -27,29 +28,40 @@ const Img: FunctionComponent<ImgPropsType> = (props) => {
     width = 435,
     height = 580,
     layout = undefined,
+    isPriority = false,
   } = props;
 
   let transformClasses = "";
 
   if (transform) {
     // join
-    let transformClasses = transform.join();
-    // concatenate together and concat '/' to end
-    transformClasses = transformClasses + "/";
+    transformClasses = transform.join();
   }
 
   // https://cloudinary.com/blog/painless_image_and_video_manipulation_with_javascript
-  const imgSrcPath = `${ASSET_PATH}${transformClasses}${imgSrc}.${ext}`;
-  console.log(height && width);
+  const imgSrcPath = `${transformClasses}/v1639606444/portfolio/${imgSrc}.${ext}`;
 
   return (
-    <Image
-      src={imgSrcPath}
-      alt={alt}
-      layout={layout}
-      width={width}
-      height={height}
-    />
+    <>
+      {isPriority ? (
+        <Image
+          src={imgSrcPath}
+          alt={alt}
+          layout={layout}
+          width={width}
+          height={height}
+          priority={true}
+        />
+      ) : (
+        <Image
+          src={imgSrcPath}
+          alt={alt}
+          layout={layout}
+          width={width}
+          height={height}
+        />
+      )}
+    </>
   );
 };
 

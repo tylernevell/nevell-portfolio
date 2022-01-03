@@ -1,21 +1,23 @@
 /* jshint node: true */
-const withPWA = require('next-pwa');
-const runtimeCaching = require('next-pwa/cache');
+const withPWA = require("next-pwa");
+const runtimeCaching = require("next-pwa/cache");
 
 /** @type {import('next').NextConfig} */
 module.exports = withPWA({
   reactStrictMode: true,
   images: {
-    domains: ['res.cloudinary.com'],
+    loader: "cloudinary",
+    path: "https://res.cloudinary.com/de3scdzao/image/upload/",
+    domains: ["res.cloudinary.com"],
   },
   pwa: {
-    dest: 'public',
+    dest: "public",
     runtimeCaching,
   },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ['@svgr/webpack'],
+      use: ["@svgr/webpack"],
     });
 
     return config;
