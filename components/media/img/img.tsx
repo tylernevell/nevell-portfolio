@@ -21,7 +21,7 @@ type ImgPropsType = {
 
 const Img: FunctionComponent<ImgPropsType> = (props) => {
   const {
-    imgSrc = "Photo_Aug_27_5_25_05_PM_ree8ne",
+    imgSrc = "Photo_Aug_07_8_24_23_AM_ucibq5",
     alt = "",
     ext = "webp",
     transform,
