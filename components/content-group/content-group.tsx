@@ -4,13 +4,13 @@ import type { PropsType as TypographyPropsType } from "../typography/types";
 import { Button } from "../button/button";
 import type { ButtonPropsType } from "../button/button";
 
-type PropsType = {
+type ContentPropsType = {
   heading: TypographyPropsType;
   subHeading: TypographyPropsType;
-  buttons: ButtonPropsType;
+  buttons?: ButtonPropsType;
 };
 
-const ContentGroup: FunctionComponent<PropsType> = (props) => {
+const ContentGroup: FunctionComponent<ContentPropsType> = (props) => {
   const { heading, subHeading, buttons } = props;
 
   return (
@@ -29,13 +29,15 @@ const ContentGroup: FunctionComponent<PropsType> = (props) => {
           fontFamily="font-sans"
           {...subHeading}
         />
-        <div className="flex mt-10">
-          <Button {...buttons} />
-        </div>
+        {buttons && (
+          <div className="flex mt-10">
+            <Button {...buttons} />
+          </div>
+        )}
       </div>
     </header>
   );
 };
 
 export { ContentGroup };
-export type { PropsType };
+export type { ContentPropsType };

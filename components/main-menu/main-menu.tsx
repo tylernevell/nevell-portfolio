@@ -11,7 +11,7 @@ type PropsType = {
   links?: LinkItem[];
 };
 
-// TODO: FIGURE OUT VERTICAL RESPONSIVENESS -- OVERFLOW CLASS MAYBE?
+// TODO: vert overflow issues? Social links not clickable
 
 const MainMenu: FunctionComponent<PropsType> = (props) => {
   const { className, links = linkItems } = props;
@@ -22,7 +22,7 @@ const MainMenu: FunctionComponent<PropsType> = (props) => {
 container flex w-full m-auto grid grid-rows-3`}
     >
       <nav
-        className={`relative flex w-full m-auto pb-14 sm:pb-0 row-start-1 justify-center space-x-10 delay-1000 ${className}`}
+        className={`pointer-events-none relative flex w-full m-auto pb-14 sm:pb-0 row-start-1 justify-center space-x-10 delay-1000 ${className}`}
       >
         <IconLinks />
       </nav>
@@ -32,7 +32,7 @@ container flex w-full m-auto grid grid-rows-3`}
         <NameTitleCard />
       </div>
       <nav
-        className={`relative flex w-full max-w-xl mx-auto row-start-3 justify-center grid gap-y-6 grid-rows-3 lg:grid-rows-1 lg:justify-evenly delay-1000 ${className}`}
+        className={`pointer-events-none relative flex w-full max-w-xl mx-auto row-start-3 justify-center grid gap-y-6 grid-rows-3 lg:grid-rows-1 lg:justify-evenly delay-1000 ${className}`}
       >
         {links.map((link: LinkItem, idx) => (
           <Link key={link?.slug?.current} href={link?.slug?.current}>

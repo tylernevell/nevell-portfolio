@@ -1,4 +1,4 @@
-import type { PropsType as ContentPropsType } from "./content-group";
+import type { ContentPropsType } from "./content-group";
 
 const content: ContentPropsType = {
   heading: {

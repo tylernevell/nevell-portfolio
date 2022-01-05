@@ -34,7 +34,21 @@ const NavBar: FunctionComponent<PropsType> = (props) => {
           <Link href="/" passHref>
             <a
               aria-label="home"
-              className="rounded pl-2 py-2 pr-5 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover hover:text-on-primary-hover"
+              className="pointer-events-auto sm:pointer-events-none rounded pl-2 py-3 pr-2 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover hover:text-on-primary-hover"
+            >
+              <Typography
+                className="sm:hidden font-bold tracking-wide uppercase"
+                variant="span"
+                fontFamily="font-mono"
+              >
+                <SpinDecor />
+              </Typography>
+            </a>
+          </Link>
+          <Link href="/" passHref>
+            <a
+              aria-label="home"
+              className="pointer-events-none sm:pointer-events-auto rounded pl-2 py-3 md:py-2 pr-5 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover hover:text-on-primary-hover"
             >
               <Typography
                 className="pl-4 hidden sm:flex font-bold tracking-wide uppercase"

@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { Container } from "../container/container";
 import { Img } from "../media/img/img";
-import { ImgPropsType } from "../media/img/img";
+import type { ImgPropsType } from "../media/img/img";
 import { Typography } from "../typography/typography";
 
 type TeammateCardPropsType = {
