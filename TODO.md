@@ -14,6 +14,4 @@ PRIORITY: FIX TYPES WITH INTERFACE https://blog.logrocket.com/using-next-js-with
 
 3. PRIORITY: Page Transitions https://dev.to/anxinyang/page-transition-effect-in-nextjs-9ch
 
-4. Make nav buttons transition like button
-
 Add NextSeo https://github.com/garmeeh/next-seo

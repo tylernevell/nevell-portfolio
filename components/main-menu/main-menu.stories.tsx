@@ -1,9 +1,9 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { MainMenu } from './main-menu';
+import React from "react";
+import { Meta, Story } from "@storybook/react";
+import { MainMenu } from "./main-menu";
 
 export default {
-  title: 'Components/MainMenu',
+  title: "Components/MainMenu",
   component: MainMenu,
   argTypes: {},
 } as Meta;

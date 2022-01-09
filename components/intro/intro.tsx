@@ -54,7 +54,7 @@ const Intro: FunctionComponent = () => {
         links={linkItems}
         className={
           enterIsPressed
-            ? "transition duration-1000 ease-in-out opacity-100 z-10"
+            ? "transition duration-1000 ease-in-out opacity-100 z-10 pointer-events-auto"
             : "opacity-0 -z-10"
         }
       />
