@@ -22,6 +22,11 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
           "and aggregate this data together to determine the most dependable sources of rankings.",
         color: "text-secondary-active",
       },
+      buttons: {
+        children: "Visit Rancup.com",
+        type: "button",
+        href: "https://www.rancup.com/",
+      },
     },
   },
 ];

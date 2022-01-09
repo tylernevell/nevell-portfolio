@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AriaAttributes, forwardRef } from "react";
 import { Typography } from "../typography/typography";
 
@@ -33,6 +34,7 @@ const Button = forwardRef<RefType, ButtonPropsType>((props, ref) => {
     buttonType = "default",
     ariaLabel,
     onClick,
+    href,
     dataToggle,
     ariaHasPopup,
     ariaExpanded,
@@ -86,26 +88,55 @@ const Button = forwardRef<RefType, ButtonPropsType>((props, ref) => {
   buttonTypeClasses += buttonWidth === "responsive" ? "" : "w-full";
 
   return (
-    <button
-      data-toggle={dataToggle}
-      data-action={dataAction}
-      data-id={dataId}
-      aria-haspopup={ariaHasPopup}
-      aria-expanded={ariaExpanded}
-      aria-label={ariaLabel}
-      id={id}
-      key={id}
-      name={name}
-      ref={ref}
-      className={buttonTypeClasses}
-      type={type}
-      onClick={onClick}
-      onKeyPress={onClick}
-      tabIndex={0}
-      disabled={disabled}
-    >
-      {children}
-    </button>
+    <>
+      {href ? (
+        <Link href={href} passHref>
+          <a target="_blank" rel="noopener noreferrer">
+            <button
+              data-toggle={dataToggle}
+              data-action={dataAction}
+              data-id={dataId}
+              aria-haspopup={ariaHasPopup}
+              aria-expanded={ariaExpanded}
+              aria-label={ariaLabel}
+              id={id}
+              key={id}
+              name={name}
+              ref={ref}
+              className={buttonTypeClasses}
+              type={type}
+              onClick={onClick}
+              onKeyPress={onClick}
+              tabIndex={0}
+              disabled={disabled}
+            >
+              {children}
+            </button>
+          </a>
+        </Link>
+      ) : (
+        <button
+          data-toggle={dataToggle}
+          data-action={dataAction}
+          data-id={dataId}
+          aria-haspopup={ariaHasPopup}
+          aria-expanded={ariaExpanded}
+          aria-label={ariaLabel}
+          id={id}
+          key={id}
+          name={name}
+          ref={ref}
+          className={buttonTypeClasses}
+          type={type}
+          onClick={onClick}
+          onKeyPress={onClick}
+          tabIndex={0}
+          disabled={disabled}
+        >
+          {children}
+        </button>
+      )}
+    </>
   );
 });
 

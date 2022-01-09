@@ -15,7 +15,7 @@ const WorkHighlight: FunctionComponent<PropsType> = (props) => {
     <Container>
       <div className="container relative mx-auto mt-8">
         <div className="relative grid grid-cols-6 gap-x-4 mx-auto">
-          <div className="col-span-6 lg:col-span-3 order-1 lg:order-none pb-8 lg:pb-0">
+          <section className="col-span-6 lg:col-span-3 order-1 lg:order-none pb-8 lg:pb-0">
             <Img
               imgSrc={workContent.img.imgSrc}
               width={workContent.img.width}
@@ -23,10 +23,10 @@ const WorkHighlight: FunctionComponent<PropsType> = (props) => {
               layout="responsive"
               isPriority={true}
             />
-          </div>
-          <div className="pl-1 lg:pl-0 flex items-center col-span-6 lg:col-span-3 order-2 lg:order-none">
+          </section>
+          <article className="pl-1 lg:pl-0 flex items-center col-span-6 lg:col-span-3 order-2 lg:order-none">
             <ContentGroup {...workContent.content} />
-          </div>
+          </article>
         </div>
       </div>
     </Container>

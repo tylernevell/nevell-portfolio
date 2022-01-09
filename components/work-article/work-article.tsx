@@ -1,30 +1,39 @@
 import { FunctionComponent } from "react";
 import { Img } from "../media/img/img";
 import { Container } from "../container/container";
-import type { WorkAboutContentPropsType } from "./work-about-content";
+import type { WorkArticleContentPropsType } from "./work-article-content";
 import { Typography } from "../typography/typography";
 
 type PropsType = {
-  workAboutContent: WorkAboutContentPropsType;
+  workArticleContent: WorkArticleContentPropsType;
 };
 
-const WorkAbout: FunctionComponent<PropsType> = (props) => {
-  const { workAboutContent } = props;
-  const paragraphs = workAboutContent.content.subHeading;
+const WorkArticle: FunctionComponent<PropsType> = (props) => {
+  const { workArticleContent } = props;
+  const paragraphs = workArticleContent.content.subHeading;
 
   return (
     <Container>
       <div className="container relative mx-auto mt-8">
         <div className="relative grid grid-cols-6 gap-x-4 mx-auto">
-          <section className="pl-1 lg:pl-0 flex items-center col-span-6 lg:col-span-3 order-2 lg:order-none">
+          <section className="col-span-6 order-1 pb-8 lg:pb-24">
+            <Img
+              imgSrc={workArticleContent.img.imgSrc}
+              width={workArticleContent.img.width}
+              height={workArticleContent.img.height}
+              layout="responsive"
+            />
+          </section>
+          <article className="pl-1 lg:pl-0 flex items-center col-span-6 order-2">
             <article className="relative flex items-center">
               <header className="lg:pr-6 py-4">
                 <Typography
                   variant="h2"
                   size="text-3xl"
                   fontFamily="font-mono"
+                  textAlign="text-center"
                   className="mb-5 font-semibold"
-                  {...workAboutContent.content.heading}
+                  {...workArticleContent.content.heading}
                 />
                 {paragraphs.map((element, idx) => (
                   <Typography
@@ -37,19 +46,11 @@ const WorkAbout: FunctionComponent<PropsType> = (props) => {
                 ))}
               </header>
             </article>
-          </section>
-          <section className="col-span-6 lg:col-span-3 order-1 lg:order-none pb-8 lg:pb-0">
-            <Img
-              imgSrc={workAboutContent.img.imgSrc}
-              width={workAboutContent.img.width}
-              height={workAboutContent.img.height}
-              layout="responsive"
-            />
-          </section>
+          </article>
         </div>
       </div>
     </Container>
   );
 };
 
-export { WorkAbout };
+export { WorkArticle };

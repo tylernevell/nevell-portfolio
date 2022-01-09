@@ -84,6 +84,55 @@ a {
   animation: blink 1s step-end infinite;
 }
 
+@layer utilities {
+  @variants responsive {
+    .scroll-snap-none {
+      scroll-snap-type: none;
+    }
+
+    .scroll-snap-x {
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll-snap-x-child {
+      scroll-snap-align: center;
+    }
+  }
+}
+
+.bubble-fit {
+  height: 100%;
+}
+
+.bubble-fit img {
+  object-fit: cover !important;
+  height: 100%;
+  min-width: 100% !important;
+}
+
+.bubble-fit figure {
+  object-fit: cover !important;
+  height: 100%;
+  min-width: 100% !important;
+}
+
+.bubble-fit-grayscale {
+  /* filter: grayscale(100%); */
+  height: 100%;
+}
+
+.bubble-fit-grayscale img {
+  object-fit: cover !important;
+  height: 100%;
+  min-width: 100% !important;
+}
+
+.bubble-fit-grayscale figure {
+  object-fit: cover !important;
+  height: 100%;
+  min-width: 100% !important;
+}
+
 @-webkit-keyframes blink {
   0% {
     opacity: 1;
