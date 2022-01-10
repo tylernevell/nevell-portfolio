@@ -18,7 +18,11 @@ const content: ContentPropsType = {
       "To be an engineer is to be a lifelong student.",
     color: "text-secondary-active",
   },
-  buttons: { children: "Download Resume", type: "button" },
+  buttons: {
+    children: "Download Resume",
+    type: "button",
+    href: "tyler-nevell-resume-2022.pdf",
+  },
 };
 
 export { content };
