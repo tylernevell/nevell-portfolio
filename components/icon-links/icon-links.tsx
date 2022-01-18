@@ -28,7 +28,7 @@ const IconLinks: VoidFunctionComponent = () => {
         <LinkedInSVG />
       </a>
       <a
-        href=""
+        href="tyler-nevell-resume-2022.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className={buttonClasses}
