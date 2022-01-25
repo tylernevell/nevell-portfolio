@@ -1,4 +1,5 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
+import { FadeInVisible } from '../fade-in-visible/fade-in-visible';
 
 type PropsType = {
   children: React.ReactNode;
@@ -6,12 +7,14 @@ type PropsType = {
 };
 
 const Container: FunctionComponent<PropsType> = (props) => {
-  const { children, className = "" } = props;
+  const { children, className = '' } = props;
   return (
     <section
       className={`container mx-auto pt-2 bg-primary-default lg:px-4 lg:pb-48 pb-24 ${className}`}
     >
-      <div className="w-full mx-auto max-w-screen-xl">{children}</div>
+      <div className="w-full mx-auto max-w-screen-xl">
+        <FadeInVisible>{children}</FadeInVisible>
+      </div>
     </section>
   );
 };
