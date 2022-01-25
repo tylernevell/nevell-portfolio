@@ -11,11 +11,9 @@ const GlobalLayout: FunctionComponent<PropsType> = ({ children }) => {
   const router = useRouter();
 
   return (
-    <main className="bg-primary-default">
+    <main>
       {router.asPath === '/' ? '' : <NavBar links={linkItems} />}
-      <div className="flex flex-wrap bg-primary-default h-full w-full">
-        {children}
-      </div>
+      <div className="flex flex-wrap h-full w-full">{children}</div>
     </main>
   );
 };
