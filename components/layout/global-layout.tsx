@@ -1,12 +1,18 @@
-import type { FunctionComponent, ReactNode } from "react";
-import { memo } from "react";
+import type { FunctionComponent, ReactNode } from 'react';
+import { memo } from 'react';
+import { useRouter } from 'next/router';
+import { linkItems } from '../nav-bar/link-items';
+import { NavBar } from '../nav-bar/nav-bar';
 
 type PropsType = {
   children: ReactNode;
 };
 const GlobalLayout: FunctionComponent<PropsType> = ({ children }) => {
+  const router = useRouter();
+
   return (
     <main className="bg-primary-default">
+      {router.asPath === '/' ? '' : <NavBar links={linkItems} />}
       <div className="flex flex-wrap bg-primary-default h-full w-full">
         {children}
       </div>
