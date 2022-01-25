@@ -1,23 +1,23 @@
-import Link from "next/link";
-import { AriaAttributes, forwardRef } from "react";
-import { Typography } from "../typography/typography";
+import Link from 'next/link';
+import { AriaAttributes, forwardRef } from 'react';
+import { Typography } from '../typography/typography';
 
-type ButtonTypes = "default" | "primary" | "danger" | "success";
+type ButtonTypes = 'default' | 'primary' | 'danger' | 'success';
 
 type ButtonPropsType = {
   children?: React.ReactNode;
-  type: "submit" | "button" | "reset" | undefined;
+  type: 'submit' | 'button' | 'reset' | undefined;
   buttonType?: ButtonTypes;
   ariaLabel?: string;
   onClick?: (event: React.MouseEvent | React.KeyboardEvent) => void;
   href?: string;
   dataToggle?: string;
-  ariaHasPopup?: AriaAttributes["aria-haspopup"];
-  ariaExpanded?: AriaAttributes["aria-expanded"];
+  ariaHasPopup?: AriaAttributes['aria-haspopup'];
+  ariaExpanded?: AriaAttributes['aria-expanded'];
   // ref?: React.Ref<HTMLButtonElement> | ((instance: HTMLButtonElement) => void);
   disabled?: boolean;
-  buttonWidth?: "full" | "responsive";
-  buttonHeight?: "small" | "medium" | "large";
+  buttonWidth?: 'full' | 'responsive';
+  buttonHeight?: 'small' | 'medium' | 'large';
   dataAction?: DOMStringMap;
   dataId?: string;
   dataReview?: string;
@@ -30,8 +30,8 @@ type RefType = HTMLButtonElement;
 const Button = forwardRef<RefType, ButtonPropsType>((props, ref) => {
   const {
     children = <Typography>Button</Typography>,
-    type = "button",
-    buttonType = "default",
+    type = 'button',
+    buttonType = 'default',
     ariaLabel,
     onClick,
     href,
@@ -39,8 +39,8 @@ const Button = forwardRef<RefType, ButtonPropsType>((props, ref) => {
     ariaHasPopup,
     ariaExpanded,
     disabled = false,
-    buttonWidth = "responsive",
-    buttonHeight = "medium",
+    buttonWidth = 'responsive',
+    buttonHeight = 'medium',
     dataAction,
     dataId,
     id,
@@ -48,99 +48,70 @@ const Button = forwardRef<RefType, ButtonPropsType>((props, ref) => {
   } = props;
 
   let buttonTypeClasses =
-    "grid gap-2 grid-flow-col items-center justify-center whitespace-nowrap " +
-    "text-sm rounded outline-none focus:outline-none transition-all " +
-    "duration-200 ease-in-out disabled:bg-button-background-disabled " +
-    "disabled:cursor-not-allowed drop-shadow-sm shadow font-medium ";
+    'grid gap-2 grid-flow-col items-center justify-center whitespace-nowrap ' +
+    'text-sm rounded outline-none focus:outline-none transition-all ' +
+    'duration-200 ease-in-out disabled:bg-button-background-disabled ' +
+    'disabled:cursor-not-allowed drop-shadow-sm shadow font-medium ';
 
   switch (buttonType) {
-    case "primary":
+    case 'primary':
       buttonTypeClasses +=
-        "px-3 py-1 shadow-sm text-white bg-primary-default " +
-        "hover:bg-primary-hover active:bg-button-background-primary-pressed " +
-        "active:border-gray-400 focus:outline-none focus:ring-2 focus:border-teal-500 " +
-        "focus:border-transparent disabled:bg-button-background-disabled ";
+        'px-3 py-1 shadow-sm text-white bg-primary-default ' +
+        'hover:bg-primary-hover active:bg-button-background-primary-pressed ' +
+        'active:border-gray-400 focus:outline-none focus:ring-2 focus:border-teal-500 ' +
+        'focus:border-transparent disabled:bg-button-background-disabled ';
       break;
-    case "danger":
+    case 'danger':
       buttonTypeClasses +=
-        "px-3 py-1 shadow-sm bg-action-critical hover:bg-action-critical-hover " +
-        "active:bg-action-critical-pressed active:border-gray-400 focus:outline-none " +
-        "focus:ring-2 focus:border-teal-500 focus:border-transparent disabled:bg-button-background-disabled ";
+        'px-3 py-1 shadow-sm bg-action-critical hover:bg-action-critical-hover ' +
+        'active:bg-action-critical-pressed active:border-gray-400 focus:outline-none ' +
+        'focus:ring-2 focus:border-teal-500 focus:border-transparent disabled:bg-button-background-disabled ';
       break;
     default:
       buttonTypeClasses +=
-        "px-3 py-1 shadow-sm bg-tertiary-default border hover:bg-tertiary-hover " +
-        "active:bg-tertiary-active active:border-gray-400 focus:outline-none focus:ring-2 " +
-        "focus:border-teal-500 focus:border-transparent disabled:bg-button-background-disabled ";
+        'px-3 py-1 shadow-sm bg-tertiary-default border hover:bg-tertiary-hover ' +
+        'active:bg-tertiary-active active:border-gray-400 focus:outline-none focus:ring-2 ' +
+        'focus:border-teal-500 focus:border-transparent disabled:bg-button-background-disabled ';
   }
 
   switch (buttonHeight) {
-    case "small":
-      buttonTypeClasses += "h-7 ";
+    case 'small':
+      buttonTypeClasses += 'h-7 ';
       break;
-    case "large":
-      buttonTypeClasses += "h-10 ";
+    case 'large':
+      buttonTypeClasses += 'h-10 ';
       break;
     default:
-      buttonTypeClasses += "h-8 ";
+      buttonTypeClasses += 'h-8 ';
   }
 
-  buttonTypeClasses += buttonWidth === "responsive" ? "" : "w-full";
+  buttonTypeClasses += buttonWidth === 'responsive' ? '' : 'w-full';
 
   return (
-    <>
-      {href ? (
-        <Link href={href} passHref>
-          <a target="_blank" rel="noopener noreferrer">
-            <button
-              data-toggle={dataToggle}
-              data-action={dataAction}
-              data-id={dataId}
-              aria-haspopup={ariaHasPopup}
-              aria-expanded={ariaExpanded}
-              aria-label={ariaLabel}
-              id={id}
-              key={id}
-              name={name}
-              ref={ref}
-              className={buttonTypeClasses}
-              type={type}
-              onClick={onClick}
-              onKeyPress={onClick}
-              tabIndex={0}
-              disabled={disabled}
-            >
-              {children}
-            </button>
-          </a>
-        </Link>
-      ) : (
-        <button
-          data-toggle={dataToggle}
-          data-action={dataAction}
-          data-id={dataId}
-          aria-haspopup={ariaHasPopup}
-          aria-expanded={ariaExpanded}
-          aria-label={ariaLabel}
-          id={id}
-          key={id}
-          name={name}
-          ref={ref}
-          className={buttonTypeClasses}
-          type={type}
-          onClick={onClick}
-          onKeyPress={onClick}
-          tabIndex={0}
-          disabled={disabled}
-        >
-          {children}
-        </button>
-      )}
-    </>
+    <button
+      data-toggle={dataToggle}
+      data-action={dataAction}
+      data-id={dataId}
+      aria-haspopup={ariaHasPopup}
+      aria-expanded={ariaExpanded}
+      aria-label={ariaLabel}
+      id={id}
+      key={id}
+      name={name}
+      ref={ref}
+      className={buttonTypeClasses}
+      type={type}
+      onClick={onClick}
+      onKeyPress={onClick}
+      tabIndex={0}
+      disabled={disabled}
+    >
+      {children}
+    </button>
   );
 });
 
-Button.displayName = "Button";
+Button.displayName = 'Button';
 
 export { Button };
 export type { ButtonPropsType, ButtonTypes, RefType };

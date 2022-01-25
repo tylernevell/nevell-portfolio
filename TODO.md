@@ -12,6 +12,10 @@ PRIORITY: FIX TYPES WITH INTERFACE https://blog.logrocket.com/using-next-js-with
 
    - https://stackoverflow.blog/2021/12/21/creating-a-good-feedback-loop-between-ops-and-devs-using-documentation/?cb=1
 
+   - https://www.carlrippon.com/react-forwardref-typescript/
+
+   - https://coryrylan.com/blog/css-gap-space-with-flexbox
+
 3. PRIORITY: Page Transitions https://dev.to/anxinyang/page-transition-effect-in-nextjs-9ch
 
 Add NextSeo https://github.com/garmeeh/next-seo

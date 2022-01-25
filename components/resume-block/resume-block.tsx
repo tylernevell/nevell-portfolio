@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { FunctionComponent, useCallback, useState } from "react";
-import { Button } from "../button/button";
-import { Container } from "../container/container";
-import { Typography } from "../typography/typography";
-import { ResumeItem } from "./resume-item";
-import type { ResumeBlockPropsType } from "./types";
+import Link from 'next/link';
+import { FunctionComponent, useCallback, useState } from 'react';
+import { Button } from '../button/button';
+import { Container } from '../container/container';
+import { Typography } from '../typography/typography';
+import { ResumeItem } from './resume-item';
+import type { ResumeBlockPropsType } from './types';
 
 const ResumeBlock: FunctionComponent<ResumeBlockPropsType> = (props) => {
   const {
@@ -32,7 +32,7 @@ const ResumeBlock: FunctionComponent<ResumeBlockPropsType> = (props) => {
   }, [numOfExperiences, setLimit]);
 
   const toggleLimit = limit === start ? showAll : hideAll;
-  const toggleText = limit === start ? "Show more" : "Hide the";
+  const toggleText = limit === start ? 'Show more' : 'Hide the';
 
   return (
     <Container>
@@ -97,7 +97,7 @@ const ResumeBlock: FunctionComponent<ResumeBlockPropsType> = (props) => {
             variant="p"
             className="my-8"
           >
-            {technicalSkills.join(", ")}
+            {technicalSkills.join(', ')}
           </Typography>
           <Typography
             color="text-secondary-active"
@@ -112,7 +112,7 @@ const ResumeBlock: FunctionComponent<ResumeBlockPropsType> = (props) => {
             variant="p"
             className="my-8"
           >
-            {interests.join(", ")}
+            {interests.join(', ')}
           </Typography>
           <Typography
             color="text-secondary-active"

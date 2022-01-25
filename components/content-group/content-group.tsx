@@ -1,13 +1,13 @@
-import { FunctionComponent } from "react";
-import { Typography } from "../typography/typography";
-import type { PropsType as TypographyPropsType } from "../typography/types";
-import { Button } from "../button/button";
-import type { ButtonPropsType } from "../button/button";
+import { FunctionComponent } from 'react';
+import { Typography } from '../typography/typography';
+import type { PropsType as TypographyPropsType } from '../typography/types';
+import type { NotButtonPropsType } from '../not-button/not-button';
+import { NotButton } from '../not-button/not-button';
 
 type ContentPropsType = {
   heading: TypographyPropsType;
   subHeading: TypographyPropsType;
-  buttons?: ButtonPropsType;
+  buttons?: NotButtonPropsType;
 };
 
 const ContentGroup: FunctionComponent<ContentPropsType> = (props) => {
@@ -31,7 +31,7 @@ const ContentGroup: FunctionComponent<ContentPropsType> = (props) => {
         />
         {buttons && (
           <div className="flex mt-10">
-            <Button {...buttons} />
+            <NotButton {...buttons} />
           </div>
         )}
       </div>
