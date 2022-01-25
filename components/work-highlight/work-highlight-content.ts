@@ -29,6 +29,26 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
       },
     },
   },
+  {
+    title: 'UI Kit',
+    img: { imgSrc: 'ezgif-3-ae0e43d151_twjdis', width: 600, height: 800 },
+    content: {
+      heading: { children: 'What is it?', color: 'text-secondary-active' },
+      subHeading: {
+        children:
+          'This is a set of reusable components such as buttons, inputs, typography, div styles, etc. ' +
+          "This UI Kit is built with React, Vanilla CSS3, and Typescript. It is built alongside RancUp's UI Kit which is " +
+          'built with Next.JS, Tailwind CSS, and Typescript. This exercise is done in my freetime to keep my CSS skills sharp ' +
+          'and to demonstrate my understanding of a modern and professional UI development to perspective employers. It is always ' +
+          'being iterated upon, so make sure to visit this page for future updates.',
+        color: 'text-secondary-active',
+      },
+      buttons: {
+        children: 'UI Kit Storybook',
+        href: 'https://61e9bb72d96c39003ae803b3-grfxzdxrum.chromatic.com/' as unknown as Url,
+      },
+    },
+  },
 ];
 
 export { workHighlightContent };
