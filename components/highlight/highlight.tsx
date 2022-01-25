@@ -1,13 +1,13 @@
-import { VoidFunctionComponent } from "react";
-import { ContentGroup } from "../content-group/content-group";
-import { Img } from "../media/img/img";
-import { content } from "../content-group/content";
-import { Container } from "../container/container";
+import { VoidFunctionComponent } from 'react';
+import { ContentGroup } from '../content-group/content-group';
+import { Img } from '../media/img/img';
+import { content } from '../content-group/content';
+import { Container } from '../container/container';
 
 const Highlight: VoidFunctionComponent = () => {
   return (
     <Container>
-      <div className="container relative mx-auto mt-20">
+      <section className="container relative mx-auto mt-20">
         <div className="relative grid grid-cols-6 gap-x-4 mx-auto">
           <div className="flex items-center pl-1 lg:pl-0 col-span-6 lg:col-span-3 order-2 lg:order-none">
             <ContentGroup {...content} />
@@ -16,7 +16,7 @@ const Highlight: VoidFunctionComponent = () => {
             <Img layout="responsive" isPriority={true} />
           </div>
         </div>
-      </div>
+      </section>
     </Container>
   );
 };
