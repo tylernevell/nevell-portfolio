@@ -1,6 +1,6 @@
-import { FunctionComponent } from "react";
-import { NameSVG } from "../svgs/name-svg.tsx/name-svg";
-import { Typography } from "../typography/typography";
+import { FunctionComponent } from 'react';
+import { NameSVG } from '../svgs/name-svg.tsx/name-svg';
+import { Typography } from '../typography/typography';
 
 const NameTitleCard: FunctionComponent = () => {
   return (
