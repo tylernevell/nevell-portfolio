@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { FunctionComponent } from "react";
-import { ASSET_PATH } from "../../../config/cloudinary";
+import Image from 'next/image';
+import { FunctionComponent } from 'react';
+import { ASSET_PATH } from '../../../config/cloudinary';
 
 // TODO:
 //  1. Make static types for transform options for safety
@@ -11,36 +11,42 @@ import { ASSET_PATH } from "../../../config/cloudinary";
 type ImgPropsType = {
   imgSrc?: string;
   alt?: string;
-  ext?: "jpg" | "png" | "webp";
+  ext?: 'jpg' | 'png' | 'webp';
   transform?: string[] | undefined;
   width?: number;
   height?: number;
-  layout?: "fixed" | "responsive" | "fill" | "intrinsic";
+  layout?: 'fixed' | 'responsive' | 'fill' | 'intrinsic';
   isPriority?: boolean;
+  isOutsideSrc?: boolean;
 };
 
 const Img: FunctionComponent<ImgPropsType> = (props) => {
   const {
-    imgSrc = "portfolio_photo_h5zkg1",
-    alt = "",
-    ext = "webp",
+    imgSrc = 'portfolio_photo_h5zkg1',
+    alt = '',
+    ext = 'webp',
     transform,
     width = 435,
     height = 580,
     layout = undefined,
     isPriority = false,
+    isOutsideSrc = false,
   } = props;
 
-  let transformClasses = "";
+  let transformClasses = '';
 
   if (transform) {
     // join
     transformClasses = transform.join();
   }
 
+  let imgSrcPath = '';
   // https://cloudinary.com/blog/painless_image_and_video_manipulation_with_javascript
-  const imgSrcPath = `/v1639606444/portfolio/${imgSrc}.${ext}`;
-
+  if (isOutsideSrc) {
+    imgSrcPath = imgSrc;
+  } else {
+    imgSrcPath = `/v1639606444/portfolio/${imgSrc}.${ext}`;
+  }
   return (
     <>
       {isPriority ? (
