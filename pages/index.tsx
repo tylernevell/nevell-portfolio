@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Intro } from '../components/intro/intro';
+import useSWR from 'swr';
+import fetcher from '../lib/fetcher';
 
 // export const getStaticProps: GetStaticProps = async () => {
 //   const menuItems = await fetch(ROUTE.PAGE).then((r) => r.json());
@@ -20,6 +22,8 @@ import { Intro } from '../components/intro/intro';
 // };
 
 const Home: NextPage = () => {
+  const { data } = useSWR('/api/top-tracks', fetcher);
+
   return (
     <div>
       <Head>
@@ -64,6 +68,7 @@ const Home: NextPage = () => {
 
       <main className="flex flex-1 h-screen bg-primary-default">
         <Intro />
+        {console.log(data)}
       </main>
     </div>
   );
