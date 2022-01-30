@@ -17,7 +17,7 @@ const NameTitleCard: FunctionComponent = () => {
           color="text-on-primary-hover"
           className="font-bold"
         >
-          Frontend Engineer
+          Front-end Engineer
         </Typography>
         <Typography
           variant="h3"

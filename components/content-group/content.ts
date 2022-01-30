@@ -3,13 +3,13 @@ import type { ContentPropsType } from './content-group';
 
 const content: ContentPropsType = {
   heading: {
-    children: 'A Frontend Engineer',
+    children: 'A Front-end Engineer',
     color: 'text-secondary-active',
   },
   subHeading: {
     children:
       'Welcome! My name is Tyler Nevell ' +
-      "and I'm a Frontend Engineer. I apply my passion for web development towards creating " +
+      "and I'm a Front-end Engineer. I apply my passion for web development towards creating " +
       'innovative experiences without relying on bulky libraries. ' +
       'I specialize in building efficient and fast web applications ' +
       'that look gorgeous and go above and beyond expectations. ' +
