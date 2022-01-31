@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { FunctionComponent } from "react";
-import { IconLinks } from "../icon-links/icon-links";
-import { NameTitleCard } from "../name-title-card/name-title-card";
-import type { LinkItem } from "../nav-bar/nav-bar";
-import { Typography } from "../typography/typography";
-import { linkItems } from "../nav-bar/link-items";
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
+import { IconLinks } from '../icon-links/icon-links';
+import { NameTitleCard } from '../name-title-card/name-title-card';
+import type { LinkItem } from '../nav-bar/nav-bar';
+import { Typography } from '../typography/typography';
+import { linkItems } from '../nav-bar/link-items';
 
 type PropsType = {
   className: string;

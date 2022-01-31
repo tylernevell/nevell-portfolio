@@ -1,17 +1,14 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+import { ComponentMeta } from '@storybook/react';
 import { NameTitleCard } from './name-title-card';
 
+const Block: React.VoidFunctionComponent = () => <h1>WIP</h1>;
 export default {
   title: 'Components/NameTitleCard',
   component: NameTitleCard,
-  argTypes: {},
-} as ComponentMeta<typeof NameTitleCard>;
+} as ComponentMeta<typeof Block>;
 
-const Template: ComponentStory<typeof NameTitleCard> = () => (
-  <div className="mt-40">
-    <NameTitleCard />
-  </div>
-);
-
-export const NameTitleCardDisplay = Template.bind({});
-NameTitleCardDisplay.args = {};
+export const Basic = {
+  args: {},
+  parameters: {},
+};
