@@ -1,8 +1,8 @@
-import { FunctionComponent, useState, useEffect } from "react";
-import { useInterval } from "../../hooks/use-interval/use-interval";
-import { IntroCommand } from "../intro-command/intro-command";
-import { MainMenu } from "../main-menu/main-menu";
-import { linkItems } from "../nav-bar/link-items";
+import { FunctionComponent, useState, useEffect } from 'react';
+import { useInterval } from '../../hooks/use-interval/use-interval';
+import { IntroCommand } from '../intro-command/intro-command';
+import { MainMenu } from '../main-menu/main-menu';
+import { linkItems } from '../nav-bar/link-items';
 
 // TODO: Add a11y functionality to links. Should be able to tab and enter to use links
 
@@ -22,22 +22,22 @@ const Intro: FunctionComponent = () => {
     const listener = () => {
       setEnterIsPressed(true);
     };
-    document.addEventListener("mousedown", listener);
+    document.addEventListener('mousedown', listener);
     return () => {
-      document.removeEventListener("mousedown", listener);
+      document.removeEventListener('mousedown', listener);
     };
   }, []);
 
   useEffect(() => {
     const listener = (event: { code: string; preventDefault: () => void }) => {
-      if (event.code === "Enter" || event.code === "NumpadEnter") {
+      if (event.code === 'Enter' || event.code === 'NumpadEnter') {
         event.preventDefault();
         setEnterIsPressed(true);
       }
     };
-    document.addEventListener("keydown", listener);
+    document.addEventListener('keydown', listener);
     return () => {
-      document.removeEventListener("keydown", listener);
+      document.removeEventListener('keydown', listener);
     };
   }, []);
 
@@ -46,16 +46,16 @@ const Intro: FunctionComponent = () => {
       <IntroCommand
         className={
           enterIsPressed
-            ? "transition duration-1000 ease-in-out opacity-0 -z-10"
-            : "opacity-100 z-10"
+            ? 'transition duration-1000 ease-in-out opacity-0 -z-10'
+            : 'opacity-100 z-10'
         }
       />
       <MainMenu
         links={linkItems}
         className={
           enterIsPressed
-            ? "transition duration-1000 ease-in-out opacity-100 z-10 pointer-events-auto"
-            : "opacity-0 -z-10"
+            ? 'transition duration-1000 ease-in-out opacity-100 z-10 pointer-events-auto'
+            : 'opacity-0 -z-10'
         }
       />
     </>
