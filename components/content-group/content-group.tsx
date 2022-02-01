@@ -29,7 +29,13 @@ const ContentGroup: FunctionComponent<ContentPropsType> = (props) => {
           fontFamily="font-sans"
           {...subHeading}
         />
-        <div className={`flex mt-10 ${buttons.length > 1 ? 'gap-x-6' : ''}`}>
+        <div
+          className={`flex mt-10 ${
+            buttons.length > 1
+              ? 'gap-6 flex flex-wrap justify-center md:justify-start'
+              : ''
+          }`}
+        >
           {buttons.map((items) => (
             <NotButton {...items} />
           ))}
