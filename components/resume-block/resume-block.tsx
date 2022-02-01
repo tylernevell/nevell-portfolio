@@ -36,7 +36,7 @@ const ResumeBlock: FunctionComponent<ResumeBlockPropsType> = (props) => {
 
   return (
     <Container>
-      <section className="container relative pl-1 lg:pl-0 grid grid-cols-6 lg:grid-cols-12 lg:gap-2">
+      <section className="container relative px-1 lg:pl-0 grid grid-cols-6 lg:grid-cols-12 lg:gap-2">
         <div className="col-span-6 lg:col-span-3 mb-8 lg:mb-0">
           <Typography
             variant="h3"

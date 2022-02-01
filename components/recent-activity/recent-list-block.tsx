@@ -15,7 +15,7 @@ const RecentActivityBlock: FunctionComponent = () => {
 
   return (
     <Container>
-      <section className="container mx-auto relative grid grid-cols-6 xl:grid-cols-12 gap-12">
+      <section className="container mx-auto flex justify-center px-1 relative grid grid-cols-6 xl:grid-cols-12 gap-12 gap-y-20 ">
         <RecentActivity title="My Recent Top Spotify Songs" data={data} />
         <CurrentlyPlaying title="Currently Playing" />
       </section>

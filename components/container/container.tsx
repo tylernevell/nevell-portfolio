@@ -9,9 +9,7 @@ type PropsType = {
 const Container: FunctionComponent<PropsType> = (props) => {
   const { children, className = '' } = props;
   return (
-    <section
-      className={`container mx-auto pt-2 lg:px-4 lg:pb-48 pb-24 ${className}`}
-    >
+    <section className={`container mx-auto pt-2 lg:pb-48 pb-24 ${className}`}>
       <div className="w-full mx-auto max-w-screen-xl">
         <FadeInVisible>{children}</FadeInVisible>
       </div>

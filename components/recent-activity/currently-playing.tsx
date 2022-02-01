@@ -30,7 +30,7 @@ const CurrentlyPlaying: FunctionComponent<CurrentlyPlayingPropsType> = (
       >
         {title}
       </Typography>
-      <div className="py-5 relative h-24">
+      <div className="py-5 relative h-32">
         <div className={`flex items-center absolute top-0 left-0 right-0`}>
           {data?.songUrl ? (
             <a
@@ -39,17 +39,11 @@ const CurrentlyPlaying: FunctionComponent<CurrentlyPlayingPropsType> = (
               rel="noopener noreferrer"
               className="inline-flex items-center"
             >
-              <div className="h-24 w-24 relative flex-shrink-0">
-                <div className="inset-0 overflow-hidden h-full rounded-full">
-                  <div className="bubble-fit">
-                    <img
-                      src={data.albumImageUrl}
-                      alt={title}
-                      className="bubble-fit"
-                    />
-                  </div>
-                </div>
-              </div>
+              <img
+                src={data.albumImageUrl}
+                alt={title}
+                className="h-32 w-32 relative flex-shrink-0"
+              />
               <div className="ml-4">
                 <div className="flex flex-col">
                   <Typography
@@ -70,7 +64,7 @@ const CurrentlyPlaying: FunctionComponent<CurrentlyPlayingPropsType> = (
               </div>
             </a>
           ) : (
-            <Typography color="text-secondary-active" className="mt-6 italic">
+            <Typography color="text-secondary-active" className="mt-10 italic">
               Tyler's not playing anything right now...
             </Typography>
           )}

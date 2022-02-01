@@ -41,7 +41,7 @@ const RecentActivity: FunctionComponent<RecentActivityPropsType> = (props) => {
       >
         {title}
       </Typography>
-      <div className="py-5 relative h-24">
+      <div className="py-5 relative h-32">
         {listeningList?.map((element, idx) => {
           const opacityClass =
             idx === listItemIndex ? 'opacity-100' : 'opacity-0 -z-10';
