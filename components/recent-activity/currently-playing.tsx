@@ -20,7 +20,7 @@ const CurrentlyPlaying: FunctionComponent<CurrentlyPlayingPropsType> = (
   );
   console.log(data);
   return (
-    <div className="relative col-span-6">
+    <article className="relative col-span-6">
       <Typography
         variant="h3"
         size="text-3xl"
@@ -33,49 +33,42 @@ const CurrentlyPlaying: FunctionComponent<CurrentlyPlayingPropsType> = (
       <div className="py-5 relative h-24">
         <div className={`flex items-center absolute top-0 left-0 right-0`}>
           {data?.songUrl ? (
-            <>
+            <a
+              href={data.songUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center"
+            >
               <div className="h-24 w-24 relative flex-shrink-0">
-                <Link href={data.songUrl} passHref>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inset-0 overflow-hidden h-full rounded-full"
-                  >
-                    <div className="bubble-fit">
-                      <img
-                        src={data.albumImageUrl}
-                        alt={title}
-                        className="bubble-fit"
-                      />
-                    </div>
-                  </a>
-                </Link>
+                <div className="inset-0 overflow-hidden h-full rounded-full">
+                  <div className="bubble-fit">
+                    <img
+                      src={data.albumImageUrl}
+                      alt={title}
+                      className="bubble-fit"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="ml-4">
-                <Link href={data.songUrl} passHref>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col"
+                <div className="flex flex-col">
+                  <Typography
+                    variant="span"
+                    className="text-ellipsis font-bold w-full"
+                    color="text-secondary-active"
                   >
-                    <Typography
-                      variant="span"
-                      className="text-ellipsis font-bold w-full"
-                      color="text-secondary-active"
-                    >
-                      {data.artist}
-                    </Typography>
-                    <Typography
-                      variant="span"
-                      className="text-ellipsis underline w-full"
-                      color="text-secondary-active"
-                    >
-                      {data.title}
-                    </Typography>
-                  </a>
-                </Link>
+                    {data.artist}
+                  </Typography>
+                  <Typography
+                    variant="span"
+                    className="text-ellipsis underline w-full"
+                    color="text-secondary-active"
+                  >
+                    {data.title}
+                  </Typography>
+                </div>
               </div>
-            </>
+            </a>
           ) : (
             <Typography color="text-secondary-active" className="mt-6 italic">
               Tyler's not playing anything right now...
@@ -83,7 +76,7 @@ const CurrentlyPlaying: FunctionComponent<CurrentlyPlayingPropsType> = (
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
