@@ -23,10 +23,12 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
           'and aggregate this data together to determine the most dependable sources of rankings.',
         color: 'text-secondary-active',
       },
-      buttons: {
-        children: 'Visit Rancup.com',
-        href: 'https://www.rancup.com/' as unknown as Url,
-      },
+      buttons: [
+        {
+          children: 'Visit Rancup.com',
+          href: 'https://www.rancup.com/' as unknown as Url,
+        },
+      ],
     },
   },
   {
@@ -37,16 +39,22 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
       subHeading: {
         children:
           'This is a set of reusable components such as buttons, inputs, typography, div styles, etc. ' +
-          "This UI Kit is built with React, Vanilla CSS3, and Typescript. It is built alongside RancUp's UI Kit which is " +
-          'built with Next.JS, Tailwind CSS, and Typescript. This exercise is done in my freetime to keep my CSS skills sharp ' +
+          'This UI Kit is built with React, CSS, and Typescript. I have built out two versions alongside each other: ' +
+          'one with Tailwind CSS and the other with Vanilla CSS. This exercise is done in my freetime to keep my CSS skills sharp ' +
           'and to demonstrate my understanding of a modern and professional UI development to perspective employers. It is always ' +
           'being iterated upon, so make sure to visit this page for future updates.',
         color: 'text-secondary-active',
       },
-      buttons: {
-        children: 'UI Kit Storybook',
-        href: 'https://61e9bb72d96c39003ae803b3-grfxzdxrum.chromatic.com/' as unknown as Url,
-      },
+      buttons: [
+        {
+          children: 'UI Kit Tailwind CSS Storybook',
+          href: 'https://61f953fe224018003f32cdab-hhyejkriqp.chromatic.com/' as unknown as Url,
+        },
+        {
+          children: 'UI Kit Vanilla CSS Storybook',
+          href: 'https://61e9bb72d96c39003ae803b3-grfxzdxrum.chromatic.com/' as unknown as Url,
+        },
+      ],
     },
   },
 ];

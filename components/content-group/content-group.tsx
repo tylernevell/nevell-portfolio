@@ -7,11 +7,11 @@ import { NotButton } from '../not-button/not-button';
 type ContentPropsType = {
   heading: TypographyPropsType;
   subHeading: TypographyPropsType;
-  buttons?: NotButtonPropsType;
+  buttons?: NotButtonPropsType[];
 };
 
 const ContentGroup: FunctionComponent<ContentPropsType> = (props) => {
-  const { heading, subHeading, buttons } = props;
+  const { heading, subHeading, buttons = [] } = props;
 
   return (
     <header className="relative flex items-center">
@@ -29,11 +29,11 @@ const ContentGroup: FunctionComponent<ContentPropsType> = (props) => {
           fontFamily="font-sans"
           {...subHeading}
         />
-        {buttons && (
-          <div className="flex mt-10">
-            <NotButton {...buttons} />
-          </div>
-        )}
+        <div className={`flex mt-10 ${buttons.length > 1 ? 'gap-x-6' : ''}`}>
+          {buttons.map((items) => (
+            <NotButton {...items} />
+          ))}
+        </div>
       </div>
     </header>
   );
