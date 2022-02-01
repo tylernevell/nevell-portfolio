@@ -5,7 +5,7 @@ import { WorkItem } from '../../components/work-item/work-item';
 const Work = () => {
   return (
     <>
-      <Container className="mt-48 content-evenly">
+      <Container className="mt-32 lg:mt-48">
         {workItems.map((workItem) => (
           <WorkItem {...workItem} />
         ))}

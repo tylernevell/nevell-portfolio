@@ -15,7 +15,7 @@ const WorkItem: FunctionComponent<WorkItemPropsType> = (props) => {
   const { title = '', description = '', href = '' } = props;
 
   return (
-    <section className="w-full flex flex-col relative mb-48 justify-center items-center text-center border-1 bg-gradient-to-r from-[#cc3981] to-[#e68f45]">
+    <section className="w-full flex flex-col relative mb-12 lg:mb-48 justify-center items-center text-center border-1 bg-gradient-to-r from-[#cc3981] to-[#e68f45]">
       <div className="flex flex-col items-center justify-center px-4 md:px-10 md:px-16 w-full md:w-10/12 lg:w-8/12 relative ">
         <h2 className="text-3xl md:text-5xl lg:text-6xl tracking-tightest text-on-primary-default font-medium font-display">
           {title}

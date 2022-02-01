@@ -5,7 +5,7 @@ import { ArticleItem } from '../components/articles/article-item';
 const Articles = () => {
   return (
     <>
-      <Container className="mt-32 lg:mt-48 content-evenly">
+      <Container className="mt-32 lg:mt-48">
         {articleItems.map((articleItem) => (
           <ArticleItem {...articleItem} />
         ))}
