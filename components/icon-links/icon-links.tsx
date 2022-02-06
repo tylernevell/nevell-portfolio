@@ -1,13 +1,13 @@
-import { VoidFunctionComponent } from "react";
-import { EmailSVG } from "../svgs/email-svg";
-import { GithubSVG } from "../svgs/github-svg";
-import { InstagramSVG } from "../svgs/instagram-svg";
-import { LinkedInSVG } from "../svgs/linkedin-svg";
-import { ResumeSVG } from "../svgs/resume-svg";
+import { VoidFunctionComponent } from 'react';
+import { EmailSVG } from '../svgs/email-svg';
+import { GithubSVG } from '../svgs/github-svg';
+import { InstagramSVG } from '../svgs/instagram-svg';
+import { LinkedInSVG } from '../svgs/linkedin-svg';
+import { ResumeSVG } from '../svgs/resume-svg';
 
 const IconLinks: VoidFunctionComponent = () => {
   const buttonClasses =
-    "rounded px-3 py-3 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover focus:bg-primary-focus active:bg-primary-active";
+    'rounded px-3 py-3 bg-transparent tracking-wide transition-all duration-200 ease-in-out hover:bg-primary-hover focus:bg-primary-focus active:bg-primary-active';
 
   return (
     <>

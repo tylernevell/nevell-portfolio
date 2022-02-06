@@ -25,7 +25,7 @@ const WorkItem: FunctionComponent<WorkItemPropsType> = (props) => {
         </p>
         <Link href={href} passHref>
           <a
-            className="bg-secondary-default text-on-secondary-default hover:text-on-secondary-hover hover:bg-secondary-hover px-10 py-4 font-normal cursor-pointer uppercase hover:bg-primary-hover tracking-widest transition-all ' +
+            className="bg-secondary-default text-on-secondary-default hover:text-on-secondary-hover hover:bg-transparent px-10 py-4 font-normal cursor-pointer uppercase hover:bg-primary-hover tracking-widest transition-all ' +
             'duration-200 ease-in-out"
           >
             Enter
