@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import { FadeInVisible } from '../components/fade-in-visible/fade-in-visible';
-import { Intro } from '../components/intro/intro';
 import { MainMenu } from '../components/main-menu/main-menu';
 import { linkItems } from '../components/nav-bar/link-items';
 

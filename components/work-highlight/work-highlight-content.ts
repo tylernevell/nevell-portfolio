@@ -33,7 +33,7 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
   },
   {
     title: 'UI Kit',
-    img: { imgSrc: 'ezgif-3-ae0e43d151_twjdis', width: 600, height: 800 },
+    img: { imgSrc: 'ui-kit-tailwind', width: 612, height: 590 },
     content: {
       heading: { children: 'What is it?', color: 'text-secondary-active' },
       subHeading: {
@@ -48,7 +48,7 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
       buttons: [
         {
           children: 'UI Kit Tailwind CSS Storybook',
-          href: 'https://61f953fe224018003f32cdab-hhyejkriqp.chromatic.com/' as unknown as Url,
+          href: 'https://main--61f953fe224018003f32cdab.chromatic.com' as unknown as Url,
         },
         {
           children: 'UI Kit Vanilla CSS Storybook',
