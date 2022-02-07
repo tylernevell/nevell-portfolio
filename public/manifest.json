@@ -4,12 +4,12 @@
   "description": "The Portfolio of Tyler Nevell and his work as a Front-end Engineer.",
   "icons": [
     {
-      "src": "",
-      "type": "",
-      "sizes": ""
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
     }
   ],
-  "start_url": "https://nevell-portfolio.vercel.app/",
+  "start_url": "/",
   "background_color": "#3367D6",
   "display": "standalone",
   "scope": "/",

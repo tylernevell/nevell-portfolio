@@ -18,6 +18,7 @@ type ImgPropsType = {
   layout?: 'fixed' | 'responsive' | 'fill' | 'intrinsic';
   isPriority?: boolean;
   isOutsideSrc?: boolean;
+  loading?: 'lazy' | 'eager' | undefined;
 };
 
 const Img: FunctionComponent<ImgPropsType> = (props) => {
@@ -31,6 +32,7 @@ const Img: FunctionComponent<ImgPropsType> = (props) => {
     layout = undefined,
     isPriority = false,
     isOutsideSrc = false,
+    loading = 'lazy',
   } = props;
 
   let transformClasses = '';
@@ -65,6 +67,7 @@ const Img: FunctionComponent<ImgPropsType> = (props) => {
           layout={layout}
           width={width}
           height={height}
+          loading={loading}
         />
       )}
     </>
