@@ -44,7 +44,7 @@ const IconLinks: VoidFunctionComponent = () => {
         <InstagramSVG />
       </a>
       <a
-        href="mailto:tylernevelljobs@gmail.com"
+        href="mailto:tylernevell@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
         className={buttonClasses}
