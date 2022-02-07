@@ -38,11 +38,11 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
       heading: { children: 'What is it?', color: 'text-secondary-active' },
       subHeading: {
         children:
-          'This is a set of reusable components such as buttons, inputs, typography, div styles, etc. ' +
+          'This is a Storybook of reusable components such as buttons, inputs, typography, div styles, etc. ' +
           'This UI Kit is built with React, CSS, and Typescript. I have built out two versions alongside each other: ' +
           'one with Tailwind CSS and the other with Vanilla CSS. This exercise is done in my freetime to keep my CSS skills sharp ' +
-          'and to demonstrate my understanding of a modern and professional UI development to perspective employers. It is always ' +
-          'being iterated upon, so make sure to visit this page for future updates.',
+          'and to demonstrate my understanding of a modern and professional UI development to perspective employers. Please give ' +
+          'Chromatic a moment to load; Chromatic can be slow for non-enterprise pages. Refresh if Storybook does not load.',
         color: 'text-secondary-active',
       },
       buttons: [
@@ -51,8 +51,8 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
           href: 'https://main--61f953fe224018003f32cdab.chromatic.com' as unknown as Url,
         },
         {
-          children: 'UI Kit Vanilla CSS Storybook',
-          href: 'https://61e9bb72d96c39003ae803b3-grfxzdxrum.chromatic.com/' as unknown as Url,
+          children: 'UI Kit Tailwind CSS Git Repo',
+          href: 'https://github.com/tylernevell/ui-kit-tailwind' as unknown as Url,
         },
       ],
     },
