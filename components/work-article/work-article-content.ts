@@ -52,7 +52,7 @@ const workArticleContent: WorkArticleContentPropsType[] = [
         {
           children:
             'Once every component is completed, proper documentation for each component will be ' +
-            'created through the addition of stories.mdx files that explain proper usage and specs. ' +
+            'created that will explain proper usage and specs. ' +
             'This storybook is always being iterated upon, so make sure to visit this page for future updates.',
           color: 'text-secondary-active',
         },
