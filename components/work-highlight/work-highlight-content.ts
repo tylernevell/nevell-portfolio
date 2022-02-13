@@ -32,6 +32,32 @@ const workHighlightContent: WorkHighlightContentPropsType[] = [
     },
   },
   {
+    title: 'Spotify Clone',
+    img: { imgSrc: 'spotify-clone', width: 503, height: 740 },
+    content: {
+      heading: { children: 'What is it?', color: 'text-secondary-active' },
+      subHeading: {
+        children:
+          'A Spotify clone built using Next.js, TypeScript, Next-Auth, Tailwind CSS, Recoil, and the Spotify API. ' +
+          'I took this project on as a challenge to my ability to navigate Authorization, API calls, and use TypeScript within ' +
+          'those disciplines. This project is still a work in progress, but as of now, you can connect your spotify account, ' +
+          'browse your playlists, play songs, and use it from any device. Before using, please activate your current device by ' +
+          'making sure you are logged in and then playing and pausing a song. This app is a work in progress.',
+        color: 'text-secondary-active',
+      },
+      buttons: [
+        {
+          children: 'Try My Spotify Clone',
+          href: 'https://spotify-clone-silk-ten.vercel.app/' as unknown as Url,
+        },
+        {
+          children: 'Spotify Clone Github Repo',
+          href: 'https://github.com/tylernevell/spotify-clone' as unknown as Url,
+        },
+      ],
+    },
+  },
+  {
     title: 'UI Kit',
     img: { imgSrc: 'ui-kit-tailwind', width: 612, height: 590 },
     content: {

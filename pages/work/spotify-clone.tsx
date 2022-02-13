@@ -5,15 +5,13 @@ import { WorkArticle } from '../../components/work-article/work-article';
 import { workArticleContent } from '../../components/work-article/work-article-content';
 import { LineBreak } from '../../components/line-break/line-break';
 
-const UIKit = () => {
+const SpotifyClone = () => {
   return (
     <>
-      <WorkTitle title="UI Kit" />
-      <WorkHighlight workContent={workHighlightContent[2]} />
-      <LineBreak label="" />
-      <WorkArticle workArticleContent={workArticleContent[1]} />
+      <WorkTitle title="Spotify Clone" />
+      <WorkHighlight workContent={workHighlightContent[1]} />
     </>
   );
 };
 
-export default UIKit;
+export default SpotifyClone;

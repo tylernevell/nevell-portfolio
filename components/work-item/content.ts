@@ -9,19 +9,19 @@ const workItems: WorkItemPropsType[] = [
     // img: { imgSrc: "" },
   },
   {
+    title: 'Spotify Clone',
+    description:
+      "A clone of Spotify built using Next.js, TypeScript, Tailwind CSS, Next-Auth, Recoil and Spotify's API.",
+    href: '/work/spotify-clone',
+    // img: { imgSrc: "" },
+  },
+  {
     title: 'UI Kit',
     description:
       'Custom UI library of reusable components such as buttons, inputs, cards, modals etc. for every dynamic state.',
     href: '/work/ui-kit',
     // img: { imgSrc: "" },
   },
-  // {
-  //   title: "Portfolio Website",
-  //   description:
-  //     "Contract work helping to build a custom portfolio website using Next.js, Storybook, and Sanity.",
-  //   href: "/work/portfolio-work",
-  //   // img: { imgSrc: "" },
-  // },
 ];
 
 export { workItems };
