@@ -10,9 +10,9 @@ const workArticleContent: WorkArticleContentPropsType[] = [
   {
     title: 'Rancup',
     img: {
-      imgSrc: 'Screen_Shot_2022-01-04_at_4.55.34_PM_xug3bq',
-      width: 1048,
-      height: 560,
+      imgSrc: 'rancup-graph',
+      width: 939,
+      height: 454,
     },
     content: {
       heading: { children: "What's Next?", color: 'text-secondary-active' },
@@ -20,10 +20,11 @@ const workArticleContent: WorkArticleContentPropsType[] = [
         {
           children:
             'At this moment, our web application is a simple portal built ' +
-            'with JavaScript, jQuery, HTML, and CSS for displaying and sharing rankings ' +
+            'with JavaScript, HTML, and CSS for displaying and sharing rankings ' +
             'with users who do not have the mobile app installed. I was brought on ' +
             'to finish out the original web site linked above and rebuild it as an enterprise ' +
-            'level application.',
+            'level application. After deployment of the website I was brought on to finish out, we ' +
+            'saw nearly 60,000 visitors over the course of the 2021 fantasy football season.',
           color: 'text-secondary-active',
         },
         {
