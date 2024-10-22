@@ -92,7 +92,7 @@ const Footer = () => {
           <ResumeSVG />
         </a>
         <a
-          href="https://www.instagram.com/tylernevell/?hl=en"
+          href="https://www.instagram.com/tynevell/?hl=en"
           target="_blank"
           rel="noopener noreferrer"
           className={buttonClasses}

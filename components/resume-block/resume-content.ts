@@ -2,9 +2,16 @@ import { ResumeBlockPropsType, ResumeItemPropsType } from './types';
 
 const experiences: ResumeItemPropsType[] = [
   {
+    place: 'Capital One',
+    title: 'Software Engineer',
+    dateRange: 'August 2022 - Today',
+    description:
+      'Engineer and develop UI/UX for Capital One Internal Marketing Tools.',
+  },
+  {
     place: 'RancUp',
     title: 'Software Engineer',
-    dateRange: 'July 2021 - Today',
+    dateRange: 'July 2021 - August 2022',
     description:
       "Tasked with building out the full scope of RancUp's functionality within the web application.",
   },
@@ -132,7 +139,7 @@ const socials = [
   },
   {
     place: 'Instagram',
-    url: 'https://www.instagram.com/tylernevell/?hl=en',
+    url: 'https://www.instagram.com/tynevell/?hl=en',
     linkText: '@tylernevell',
   },
 ];
